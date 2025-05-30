@@ -1,0 +1,11 @@
+bitrix/*
+upload/
+backup/
+*.log
+.cache/
+.bx_temp/
+dbconn.php
+license_key.php
+.idea/
+.vscode/
+.DS_Store
