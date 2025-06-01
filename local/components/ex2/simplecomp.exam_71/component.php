@@ -1,5 +1,10 @@
 <?
-if($this->startResultCache(false, array($USER->GetGroups()))) {
+global $CACHE_MANAGER;
+if($this->startResultCache(false, array($USER->GetGroups(), "/servicesIblock"))) {
+	if (\Bitrix\Main\Loader::includeModule("iblock")) {
+        $CACHE_MANAGER->StartTagCache($this->GetCachePath());
+        $CACHE_MANAGER->RegisterTag("iblock_id_" . intval($arParams["CLASS"]));
+    }
     $arClassIf = array();
     $arClassIfId = array();
 	$arResult["COUNT"] = 0;
@@ -48,6 +53,9 @@ if($this->startResultCache(false, array($USER->GetGroups()))) {
     }
     $arResult["CLASS"] = $arClassIf;
 	$this->SetResultCacheKeys(array("COUNT"));
+
+	$CACHE_MANAGER->EndTagCache();
+    $this->SetResultCacheKeys(["COUNT"]);
 } else {
     $this->abortResultCache();
 }
@@ -117,6 +125,5 @@ if(intval($arParams["PRODUCTS_IBLOCK_ID"]) > 0)
 }
 global $APPLICATION;
 $APPLICATION->SetTitle(GetMessage("SIMPLECOMP_EXAM2_COUNT_71") . $arResult["COUNT"]);
-
 $this->includeComponentTemplate();	
 ?>

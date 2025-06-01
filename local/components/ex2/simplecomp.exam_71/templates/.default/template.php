@@ -1,10 +1,6 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <p><b><?=GetMessage("SIMPLECOMP_EXAM2_CAT_TITLE")?></b></p>
-<!-- <pre> -->
-<?
-// print_r($arResult);
-?>
-<!-- </pre> -->
+<?=GetMessage("SIMPLECOMP_EXAM2_TIME_71")?>: <?= time(); ?>
 <?if(count($arResult["CLASS"]) > 0):?>
     <ul>
     <?foreach($arResult["CLASS"] as $arClass):?>

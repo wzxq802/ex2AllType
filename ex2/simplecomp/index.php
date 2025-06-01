@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("Простой компонент");
 	Array(
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
+		"CACHE_TYPE" => "N",
 		"CLASS" => "7",
 		"PRODUCTS_IBLOCK_ID" => "2",
 		"PROPERTY" => "FIRMA",
