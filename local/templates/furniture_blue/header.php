@@ -12,6 +12,7 @@ IncludeTemplateLangFile(__FILE__);
 <?
 
 ?>
+<meta name="description" content="<?=htmlspecialchars($APPLICATION->GetPageProperty('description'))?>" />
 <title><?$APPLICATION->ShowTitle()?></title>
 </head>
 <body>
