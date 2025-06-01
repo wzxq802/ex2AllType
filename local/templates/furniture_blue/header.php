@@ -9,9 +9,10 @@ IncludeTemplateLangFile(__FILE__);
 <?$APPLICATION->ShowHead();?>
 <link href="<?=SITE_TEMPLATE_PATH?>/common.css" type="text/css" rel="stylesheet" />
 <link href="<?=SITE_TEMPLATE_PATH?>/colors.css" type="text/css" rel="stylesheet" />
+<?
 
+?>
 <title><?$APPLICATION->ShowTitle()?></title>
-<meta name="description" content="<?=$APPLICATION->ShowProperty("description")?>">
 </head>
 <body>
 	<div id="page-wrapper">
